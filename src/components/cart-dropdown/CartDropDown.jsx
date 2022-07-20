@@ -15,7 +15,9 @@ function CartDropDown() {
     <div className="cart-dropdown-container">
       <div className="cart-items">
         {cartItems.length ? (
-          cartItems.map((cartItem) => <CartItem cartItem={cartItem} />)
+          cartItems.map((cartItem) => (
+            <CartItem cartItem={cartItem} key={cartItem.id} />
+          ))
         ) : (
           <span className="empty-message"> Cart Is Empty</span>
         )}
