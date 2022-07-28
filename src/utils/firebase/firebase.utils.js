@@ -30,6 +30,7 @@ const firebaseConfig = {
 };
 export const SignOutUser = async () => await signOut(auth);
 
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const googleProvider = new GoogleAuthProvider();
